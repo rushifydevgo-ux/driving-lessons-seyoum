@@ -1,0 +1,327 @@
+/* =============================================================
+ * BMW Corporate Design System — Colors & Type
+ * Reference: BMW corporate site (measured, corporate-automotive).
+ * Distinct from BMW M (motorsport). Single primary brand color
+ * (BMW Blue #1c69d4), rectangular (0px radius) buttons, BMW Type
+ * Next Latin (700 display / 300 body Light).
+ * ============================================================= */
+
+/* --- Font Face (substituted; see /fonts and README) ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+  /* ---------- Brand & Accent ---------- */
+  --bmw-primary: #1c69d4;          /* BMW corporate blue */
+  --bmw-primary-active: #0653b6;
+  --bmw-primary-disabled: #d6d6d6;
+
+  /* M tricolor — only in M-model contexts */
+  --bmw-m-blue-light: #0066b1;
+  --bmw-m-blue-dark:  #1c69d4;
+  --bmw-m-red:        #e22718;
+
+  /* ---------- Text ---------- */
+  --bmw-ink: #262626;              /* primary text / display */
+  --bmw-body: #3c3c3c;             /* default running text */
+  --bmw-body-strong: #1a1a1a;      /* lead / emphasized */
+  --bmw-muted: #6b6b6b;            /* breadcrumbs, footer links */
+  --bmw-muted-soft: #9a9a9a;       /* disabled / fine-print */
+  --bmw-on-primary: #ffffff;
+  --bmw-on-dark: #ffffff;
+  --bmw-on-dark-soft: #bbbbbb;
+
+  /* ---------- Surfaces ---------- */
+  --bmw-canvas: #ffffff;           /* default page surface */
+  --bmw-surface-soft: #f7f7f7;     /* footer + sub-nav bands */
+  --bmw-surface-card: #fafafa;     /* model-card photo plate */
+  --bmw-surface-strong: #ebebeb;   /* section divider */
+  --bmw-surface-dark: #1a2129;     /* hero band navy (warm undertone) */
+  --bmw-surface-dark-elevated: #262e38;
+
+  /* ---------- Hairlines ---------- */
+  --bmw-hairline: #e6e6e6;
+  --bmw-hairline-strong: #cccccc;
+
+  /* ---------- Semantic ---------- */
+  --bmw-success: #22c55e;
+  --bmw-warning: #f59e0b;
+  --bmw-error:   #dc2626;
+
+  /* ---------- Radius (binary: rectangular or circular) ---------- */
+  --bmw-radius-none: 0px;
+  --bmw-radius-xs:   2px;
+  --bmw-radius-sm:   4px;
+  --bmw-radius-md:   8px;
+  --bmw-radius-lg:   12px;
+  --bmw-radius-pill: 9999px;
+  --bmw-radius-full: 9999px;
+
+  /* ---------- Spacing (8px base) ---------- */
+  --bmw-space-xxs: 4px;
+  --bmw-space-xs:  8px;
+  --bmw-space-sm:  12px;
+  --bmw-space-md:  16px;
+  --bmw-space-lg:  24px;
+  --bmw-space-xl:  32px;
+  --bmw-space-xxl: 48px;
+  --bmw-space-section: 80px;
+
+  /* ---------- Typography ---------- */
+  /* BMW Type Next Latin is licensed; Inter is the open substitute. */
+  --bmw-font-family: 'BMW Type Next Latin', 'Inter', system-ui, -apple-system,
+                     BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Weights — system uses 700 / 400 / 300; 500 is deliberately absent */
+  --bmw-weight-bold: 700;
+  --bmw-weight-regular: 400;
+  --bmw-weight-light: 300;
+
+  /* Sizes */
+  --bmw-fs-display-xl: 64px;
+  --bmw-fs-display-lg: 48px;
+  --bmw-fs-display-md: 32px;
+  --bmw-fs-display-sm: 24px;
+  --bmw-fs-title-lg: 20px;
+  --bmw-fs-title-md: 18px;
+  --bmw-fs-title-sm: 16px;
+  --bmw-fs-body-md: 16px;
+  --bmw-fs-body-sm: 14px;
+  --bmw-fs-caption: 12px;
+  --bmw-fs-label: 13px;
+  --bmw-fs-button: 14px;
+  --bmw-fs-nav: 14px;
+
+  /* Line heights */
+  --bmw-lh-display: 1.1;
+  --bmw-lh-tight: 1.25;
+  --bmw-lh-snug: 1.4;
+  --bmw-lh-body: 1.55;
+
+  /* Layout */
+  --bmw-container-max: 1440px;
+  --bmw-nav-height: 64px;
+}
+
+/* =============================================================
+ * Semantic typography classes — apply directly to elements.
+ * ============================================================= */
+
+html, body {
+  font-family: var(--bmw-font-family);
+  font-weight: var(--bmw-weight-light);
+  color: var(--bmw-body);
+  background: var(--bmw-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bmw-display-xl {
+  font-family: var(--bmw-font-family);
+  font-size: var(--bmw-fs-display-xl);
+  font-weight: var(--bmw-weight-bold);
+  line-height: 1.05;
+  letter-spacing: 0;
+  color: var(--bmw-ink);
+}
+.bmw-display-lg {
+  font-family: var(--bmw-font-family);
+  font-size: var(--bmw-fs-display-lg);
+  font-weight: var(--bmw-weight-bold);
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: var(--bmw-ink);
+}
+.bmw-display-md {
+  font-family: var(--bmw-font-family);
+  font-size: var(--bmw-fs-display-md);
+  font-weight: var(--bmw-weight-bold);
+  line-height: 1.15;
+  letter-spacing: 0;
+  color: var(--bmw-ink);
+}
+.bmw-display-sm {
+  font-family: var(--bmw-font-family);
+  font-size: var(--bmw-fs-display-sm);
+  font-weight: var(--bmw-weight-bold);
+  line-height: 1.25;
+  letter-spacing: 0;
+  color: var(--bmw-ink);
+}
+.bmw-title-lg {
+  font-size: var(--bmw-fs-title-lg);
+  font-weight: var(--bmw-weight-bold);
+  line-height: 1.3;
+  color: var(--bmw-ink);
+}
+.bmw-title-md {
+  font-size: var(--bmw-fs-title-md);
+  font-weight: var(--bmw-weight-bold);
+  line-height: 1.4;
+  color: var(--bmw-ink);
+}
+.bmw-title-sm {
+  font-size: var(--bmw-fs-title-sm);
+  font-weight: var(--bmw-weight-bold);
+  line-height: 1.4;
+  color: var(--bmw-ink);
+}
+.bmw-body-md {
+  font-size: var(--bmw-fs-body-md);
+  font-weight: var(--bmw-weight-light);
+  line-height: 1.55;
+  color: var(--bmw-body);
+}
+.bmw-body-sm {
+  font-size: var(--bmw-fs-body-sm);
+  font-weight: var(--bmw-weight-light);
+  line-height: 1.55;
+  color: var(--bmw-body);
+}
+.bmw-caption {
+  font-size: var(--bmw-fs-caption);
+  font-weight: var(--bmw-weight-regular);
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  color: var(--bmw-muted);
+}
+.bmw-label {
+  font-size: var(--bmw-fs-label);
+  font-weight: var(--bmw-weight-bold);
+  line-height: 1.3;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--bmw-ink);
+}
+.bmw-nav-link {
+  font-size: var(--bmw-fs-nav);
+  font-weight: var(--bmw-weight-regular);
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+  color: var(--bmw-ink);
+}
+
+/* =============================================================
+ * Core component primitives
+ * ============================================================= */
+
+.bmw-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  padding: 14px 32px;
+  font-family: var(--bmw-font-family);
+  font-size: var(--bmw-fs-button);
+  font-weight: var(--bmw-weight-bold);
+  letter-spacing: 0.5px;
+  line-height: 1;
+  border-radius: var(--bmw-radius-none);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+  user-select: none;
+}
+.bmw-btn--primary {
+  background: var(--bmw-primary);
+  color: var(--bmw-on-primary);
+}
+.bmw-btn--primary:hover,
+.bmw-btn--primary:active {
+  background: var(--bmw-primary-active);
+}
+.bmw-btn--primary[disabled] {
+  background: var(--bmw-primary-disabled);
+  color: var(--bmw-muted);
+  cursor: not-allowed;
+}
+.bmw-btn--secondary {
+  background: var(--bmw-canvas);
+  color: var(--bmw-ink);
+  border-color: var(--bmw-hairline-strong);
+  padding: 13px 31px;
+}
+.bmw-btn--secondary:hover {
+  border-color: var(--bmw-ink);
+}
+.bmw-btn--secondary-on-dark {
+  background: transparent;
+  color: var(--bmw-on-dark);
+  border-color: var(--bmw-on-dark);
+  padding: 13px 31px;
+}
+.bmw-btn--secondary-on-dark:hover {
+  background: rgba(255,255,255,.1);
+}
+.bmw-btn--text {
+  height: auto;
+  padding: 0;
+  background: transparent;
+  color: var(--bmw-ink);
+  font-size: var(--bmw-fs-label);
+  font-weight: var(--bmw-weight-bold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: none;
+}
+.bmw-btn--text::after {
+  content: '›';
+  font-size: 16px;
+  letter-spacing: 0;
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+.bmw-input {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 14px 16px;
+  font-family: var(--bmw-font-family);
+  font-size: var(--bmw-fs-body-md);
+  font-weight: var(--bmw-weight-light);
+  color: var(--bmw-ink);
+  background: var(--bmw-canvas);
+  border: 1px solid var(--bmw-hairline);
+  border-radius: var(--bmw-radius-none);
+  outline: none;
+  transition: border-color .15s ease;
+}
+.bmw-input:focus {
+  border-color: var(--bmw-ink);
+  border-width: 1px;
+}
+
+.bmw-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  font-size: var(--bmw-fs-caption);
+  font-weight: var(--bmw-weight-regular);
+  letter-spacing: 0.5px;
+  color: var(--bmw-ink);
+  background: var(--bmw-canvas);
+  border: 1px solid var(--bmw-hairline-strong);
+  border-radius: var(--bmw-radius-none);
+  cursor: pointer;
+}
+.bmw-chip--active {
+  background: var(--bmw-ink);
+  color: var(--bmw-on-dark);
+  border-color: var(--bmw-ink);
+}
+
+/* M tricolor stripe — divider only */
+.bmw-m-stripe {
+  display: block;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--bmw-m-blue-light) 0%,
+    var(--bmw-m-blue-light) 33.333%,
+    var(--bmw-m-blue-dark) 33.333%,
+    var(--bmw-m-blue-dark) 66.666%,
+    var(--bmw-m-red) 66.666%,
+    var(--bmw-m-red) 100%
+  );
+}
