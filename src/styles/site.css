@@ -1,0 +1,1092 @@
+/* =============================================================
+ * Driving Lessons with Seyoum — site-specific styles
+ * Built on top of colors_and_type.css + ui-kit.css
+ * BMW-inspired, warmer for a local business
+ * ============================================================= */
+
+/* ------------------------------------------------------------- */
+/*  Logo lockup                                                  */
+/* ------------------------------------------------------------- */
+.rd-logo {
+  display: flex; align-items: center; gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.rd-logo-mark {
+  width: 36px; height: 36px;
+  background: var(--bmw-primary);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--bmw-on-primary);
+  font-weight: 700;
+  font-size: 18px;
+  flex: none;
+}
+.rd-logo-text {
+  display: flex; flex-direction: column;
+  line-height: 1;
+}
+.rd-logo-text strong {
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--bmw-ink);
+  white-space: nowrap;
+}
+.rd-logo-text span {
+  font-size: 10px; font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--bmw-muted);
+  margin-top: 4px;
+}
+
+/* Nav phone */
+.rd-nav-phone {
+  font-size: 14px; font-weight: 700;
+  color: var(--bmw-ink);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--bmw-hairline);
+  transition: border-color .15s, color .15s;
+  font-variant-numeric: tabular-nums;
+}
+.rd-nav-phone:hover {
+  color: var(--bmw-primary);
+  border-color: var(--bmw-ink);
+}
+
+/* ------------------------------------------------------------- */
+/*  Section heads (editorial, left-aligned)                      */
+/* ------------------------------------------------------------- */
+.rd-sec-head {
+  margin-bottom: 56px;
+  max-width: 760px;
+}
+.rd-sec-head .bmw-eyebrow { margin-bottom: 12px; }
+.rd-sec-head h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0 0 16px;
+  color: var(--bmw-ink);
+  text-wrap: balance;
+  letter-spacing: -0.5px;
+}
+.rd-sec-head-sub {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--bmw-body);
+  margin: 16px 0 0;
+  text-wrap: pretty;
+  max-width: 600px;
+}
+.rd-sec-head--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rd-sec-head--center .rd-sec-head-sub {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ------------------------------------------------------------- */
+/*  Hero — warm, light version                                    */
+/* ------------------------------------------------------------- */
+.rd-hero-light {
+  background:
+    radial-gradient(circle at 85% 20%, #eaf0fa 0%, transparent 50%),
+    linear-gradient(180deg, #fafbfc 0%, #ffffff 100%);
+  padding: 88px 0 96px;
+  position: relative;
+  overflow: hidden;
+}
+.rd-hero-light::before {
+  /* subtle BMW blue accent strip in the corner */
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 6px; height: 120px;
+  background: var(--bmw-primary);
+  pointer-events: none;
+}
+.rd-hero-light-inner {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.rd-hero-light-copy { max-width: 600px; }
+.rd-hero-light-title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -1.5px;
+  margin: 16px 0 24px;
+  color: var(--bmw-ink);
+  text-wrap: balance;
+}
+.rd-hero-light-accent {
+  color: var(--bmw-primary);
+  display: inline;
+}
+.rd-hero-light-sub {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--bmw-body);
+  margin: 0 0 40px;
+  max-width: 540px;
+  text-wrap: pretty;
+}
+.rd-hero-cta-row {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.rd-hero-light-meta {
+  display: flex; align-items: stretch;
+  gap: 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--bmw-hairline);
+  flex-wrap: wrap;
+}
+.rd-hero-meta-phone,
+.rd-hero-meta-cash {
+  display: flex; align-items: center; gap: 14px;
+  color: var(--bmw-ink);
+  text-decoration: none;
+}
+.rd-hero-meta-phone svg,
+.rd-hero-meta-cash svg {
+  flex: none;
+  color: var(--bmw-primary);
+}
+.rd-hero-meta-phone-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--bmw-muted);
+  margin-bottom: 4px;
+}
+.rd-hero-meta-phone-num {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--bmw-ink);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.2px;
+}
+.rd-hero-meta-divider {
+  width: 1px;
+  background: var(--bmw-hairline);
+}
+
+.rd-hero-light-photo {
+  position: relative;
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.rd-hero-photo-slot-light {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--bmw-surface-card);
+  overflow: hidden;
+  position: relative;
+}
+.rd-hero-photo-slot-light image-slot {
+  width: 100%; height: 100%;
+  display: block;
+}
+.rd-hero-light-photo-tag {
+  position: absolute;
+  bottom: 24px; left: -32px;
+  background: var(--bmw-canvas);
+  border: 1px solid var(--bmw-hairline);
+  padding: 20px 24px;
+  width: 260px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.rd-hero-light-photo-tag-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: 12px;
+  font-size: 13px;
+}
+.rd-hero-light-photo-tag-val {
+  font-weight: 700;
+  color: var(--bmw-ink);
+  text-align: right;
+}
+
+/* ------------------------------------------------------------- */
+/*  Services — large 2-up cards                                  */
+/* ------------------------------------------------------------- */
+.rd-service-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.rd-service-card-lg {
+  background: var(--bmw-canvas);
+  border: 1px solid var(--bmw-hairline);
+  padding: 40px;
+  display: flex; flex-direction: column;
+  transition: border-color .15s ease;
+}
+.rd-service-card-lg:hover { border-color: var(--bmw-ink); }
+.rd-service-num {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--bmw-primary);
+  margin-bottom: 32px;
+  font-variant-numeric: tabular-nums;
+}
+.rd-service-title-lg {
+  font-size: 32px; font-weight: 700;
+  color: var(--bmw-ink);
+  margin: 0 0 16px;
+  line-height: 1.15;
+  letter-spacing: -0.3px;
+  text-wrap: balance;
+}
+.rd-service-desc-lg {
+  font-size: 15px; font-weight: 300;
+  line-height: 1.6;
+  color: var(--bmw-body);
+  margin: 0 0 24px;
+  text-wrap: pretty;
+}
+.rd-service-bullets {
+  list-style: none;
+  padding: 0; margin: 0 0 32px;
+  display: flex; flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.rd-service-bullets li {
+  font-size: 14px; font-weight: 300;
+  line-height: 1.5;
+  color: var(--bmw-body);
+  padding-left: 20px;
+  position: relative;
+}
+.rd-service-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 8px;
+  width: 8px; height: 2px;
+  background: var(--bmw-primary);
+}
+.rd-service-foot {
+  display: flex; align-items: center; gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--bmw-hairline);
+}
+.rd-service-foot-meta {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.rd-service-foot-meta strong {
+  font-size: 14px; color: var(--bmw-ink);
+}
+.rd-service-foot .bmw-btn--text {
+  margin-left: auto;
+}
+
+/* ------------------------------------------------------------- */
+/*  Pricing — single featured card                               */
+/* ------------------------------------------------------------- */
+.rd-pricing-feature {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 0;
+  background: var(--bmw-canvas);
+  border: 1px solid var(--bmw-hairline);
+  margin-bottom: 32px;
+}
+.rd-pricing-feature-left {
+  padding: 48px;
+}
+.rd-pricing-feature-left .bmw-eyebrow { margin-bottom: 16px; }
+.rd-pricing-feature-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--bmw-ink);
+  margin: 0 0 20px;
+  letter-spacing: -0.5px;
+  text-wrap: balance;
+}
+.rd-pricing-feature-sub {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--bmw-body);
+  margin: 0 0 32px;
+  max-width: 480px;
+  text-wrap: pretty;
+}
+.rd-pricing-feature-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+  gap: 12px;
+}
+.rd-pricing-feature-list li {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--bmw-body);
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.rd-pricing-feature-list li::before {
+  content: '';
+  display: block;
+  width: 14px; height: 14px;
+  background: var(--bmw-primary);
+  margin-top: 4px;
+  flex: none;
+  clip-path: polygon(20% 50%, 0% 70%, 40% 100%, 100% 20%, 80% 0%, 40% 60%);
+}
+.rd-pricing-feature-right {
+  background: var(--bmw-ink);
+  color: var(--bmw-on-dark);
+  display: flex; align-items: stretch;
+  position: relative;
+}
+.rd-pricing-feature-right::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--bmw-primary);
+}
+.rd-pricing-feature-price-card {
+  padding: 48px;
+  display: flex; flex-direction: column;
+  width: 100%;
+}
+.rd-pricing-feature-price-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--bmw-on-dark-soft);
+  margin-bottom: 16px;
+}
+.rd-pricing-feature-price-amount {
+  display: flex; align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+.rd-pricing-feature-price-currency {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--bmw-on-dark);
+  margin-top: 12px;
+}
+.rd-pricing-feature-price-figure {
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--bmw-on-dark);
+  line-height: 1;
+  letter-spacing: -3px;
+  font-variant-numeric: tabular-nums;
+}
+.rd-pricing-feature-price-unit {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--bmw-on-dark-soft);
+  margin-bottom: 24px;
+}
+.rd-pricing-feature-price-rate {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--bmw-on-dark-soft);
+  padding: 16px 0;
+  margin-bottom: 24px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.rd-pricing-feature-price-rate strong {
+  color: var(--bmw-on-dark);
+  font-weight: 700;
+}
+.rd-pricing-feature-cta {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.rd-pricing-feature-fineprint {
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--bmw-on-dark-soft);
+  line-height: 1.5;
+}
+
+/* Cash-only callout */
+.rd-pricing-callout {
+  background: var(--bmw-canvas);
+  border: 1px solid var(--bmw-hairline);
+  border-left: 4px solid var(--bmw-primary);
+  padding: 24px 32px;
+  display: flex; align-items: center; gap: 24px;
+}
+.rd-pricing-callout-icon {
+  flex: none;
+  width: 56px; height: 56px;
+  background: var(--bmw-ink);
+  color: var(--bmw-on-dark);
+  display: flex; align-items: center; justify-content: center;
+}
+.rd-pricing-callout-body { flex: 1; }
+.rd-pricing-callout-title {
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--bmw-ink);
+  margin: 0 0 8px;
+}
+.rd-pricing-callout-sub {
+  font-size: 14px; font-weight: 300;
+  color: var(--bmw-body);
+  margin: 0;
+  line-height: 1.55;
+  max-width: 720px;
+  text-wrap: pretty;
+}
+
+/* ------------------------------------------------------------- */
+/*  Booking — Calendly-style shell                               */
+/* ------------------------------------------------------------- */
+.rd-book-band {
+  background: var(--bmw-surface-soft);
+  padding: var(--bmw-space-section) 0;
+}
+.rd-book-shell {
+  background: var(--bmw-canvas);
+  border: 1px solid var(--bmw-hairline);
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.rd-book-shell-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--bmw-hairline);
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.rd-book-shell-head-left {
+  display: flex; align-items: center; gap: 16px;
+}
+.rd-book-shell-avatar {
+  width: 48px; height: 48px;
+  background: var(--bmw-primary);
+  color: var(--bmw-on-primary);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 22px;
+  border-radius: 50%;
+  flex: none;
+}
+.rd-book-shell-title {
+  font-size: 16px; font-weight: 700;
+  color: var(--bmw-ink);
+  margin-bottom: 4px;
+}
+.rd-book-shell-sub {
+  font-size: 12px; font-weight: 400;
+  color: var(--bmw-muted);
+  display: flex; align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.rd-book-shell-sub svg { vertical-align: middle; }
+.rd-dot-sep {
+  color: var(--bmw-muted-soft);
+  margin: 0 4px;
+}
+.rd-book-shell-stepper {
+  display: flex; align-items: center;
+  gap: 0;
+}
+.rd-book-shell-step {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--bmw-muted-soft);
+  transition: color .15s;
+}
+.rd-book-shell-step.is-active {
+  color: var(--bmw-ink);
+}
+.rd-book-shell-step-divider {
+  width: 24px; height: 1px;
+  background: var(--bmw-hairline-strong);
+  margin: 0 12px;
+}
+.rd-book-shell-body {
+  padding: 0;
+}
+.rd-book-shell-foot {
+  padding: 14px 32px;
+  border-top: 1px solid var(--bmw-hairline);
+  background: var(--bmw-surface-soft);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--bmw-muted);
+  text-align: center;
+}
+
+/* Step 0 — date + time grid */
+.rd-book-step-time {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  min-height: 540px;
+}
+.rd-book-step-time-left {
+  padding: 32px;
+  border-right: 1px solid var(--bmw-hairline);
+}
+.rd-book-step-time-right {
+  padding: 32px;
+  display: flex; flex-direction: column;
+}
+.rd-time-col-head {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--bmw-ink);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--bmw-hairline);
+}
+.rd-time-col-section {
+  margin-bottom: 24px;
+}
+.rd-time-col-label {
+  margin-bottom: 12px;
+  font-size: 10px;
+}
+.rd-time-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.rd-time-pill {
+  padding: 14px 12px;
+  background: var(--bmw-canvas);
+  border: 1px solid var(--bmw-hairline);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--bmw-ink);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  transition: border-color .12s, background .12s, color .12s;
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px;
+}
+.rd-time-pill:hover:not(:disabled) { border-color: var(--bmw-ink); }
+.rd-time-pill:disabled {
+  color: var(--bmw-muted-soft);
+  cursor: not-allowed;
+  background: var(--bmw-surface-soft);
+  font-weight: 400;
+}
+.rd-time-pill.is-selected {
+  background: var(--bmw-primary);
+  color: var(--bmw-on-primary);
+  border-color: var(--bmw-primary);
+}
+.rd-time-pill-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--bmw-muted-soft);
+}
+.rd-time-col-empty {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 16px;
+  color: var(--bmw-muted);
+  padding: 48px 24px;
+  text-align: center;
+}
+.rd-time-col-empty p {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+}
+.rd-time-col-footnote {
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: var(--bmw-muted);
+  border-top: 1px solid var(--bmw-hairline);
+}
+
+/* Custom Calendly-style calendar */
+.rd-cal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.rd-cal-month {
+  font-size: 18px; font-weight: 700;
+  color: var(--bmw-ink);
+  letter-spacing: 0.2px;
+}
+.rd-cal-nav {
+  display: flex; gap: 4px;
+}
+.rd-cal-nav button {
+  width: 36px; height: 36px;
+  background: var(--bmw-canvas);
+  border: 1px solid var(--bmw-hairline);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--bmw-ink);
+  transition: border-color .15s;
+}
+.rd-cal-nav button:hover:not(:disabled) { border-color: var(--bmw-ink); }
+.rd-cal-nav button:disabled {
+  color: var(--bmw-muted-soft);
+  cursor: not-allowed;
+}
+.rd-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.rd-cal-dow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--bmw-muted);
+  text-align: center;
+  padding: 10px 0 6px;
+}
+.rd-cal-day {
+  aspect-ratio: 1;
+  background: var(--bmw-surface-soft);
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--bmw-ink);
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+  transition: background .12s, color .12s, border-color .12s;
+}
+.rd-cal-day.is-available {
+  background: #e8f0fc;
+  color: var(--bmw-primary);
+  font-weight: 700;
+}
+.rd-cal-day.is-available:hover {
+  background: var(--bmw-primary);
+  color: var(--bmw-on-primary);
+}
+.rd-cal-day.is-disabled {
+  background: transparent;
+  color: var(--bmw-muted-soft);
+  cursor: not-allowed;
+  font-weight: 400;
+}
+.rd-cal-day.is-selected,
+.rd-cal-day.is-selected.is-available {
+  background: var(--bmw-ink);
+  color: var(--bmw-on-dark);
+  font-weight: 700;
+}
+.rd-cal-day.is-today {
+  outline: 1px solid var(--bmw-ink);
+  outline-offset: -1px;
+}
+.rd-cal-legend {
+  margin-top: 20px;
+  display: flex; gap: 20px;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--bmw-muted);
+}
+.rd-cal-legend-dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+.rd-cal-legend-dot--available { background: #e8f0fc; }
+.rd-cal-legend-dot--off { background: var(--bmw-surface-soft); }
+
+/* Step 1 — details */
+.rd-book-step-details {
+  padding: 32px;
+}
+.rd-book-step-details-summary {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 20px;
+  background: var(--bmw-surface-soft);
+  border-left: 3px solid var(--bmw-primary);
+  margin-bottom: 32px;
+  font-size: 14px;
+  color: var(--bmw-body);
+}
+.rd-book-step-details-summary strong {
+  color: var(--bmw-ink);
+  font-weight: 700;
+}
+.rd-book-step-details-edit {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--bmw-primary);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.rd-book-step-details-edit:hover { color: var(--bmw-primary-active); }
+
+.rd-field {
+  display: flex; flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.rd-field-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--bmw-ink);
+  display: flex; align-items: center; gap: 6px;
+}
+.rd-req { color: var(--bmw-error); }
+.rd-req-soft {
+  color: var(--bmw-muted-soft);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.rd-field-error {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--bmw-error);
+  margin-top: 4px;
+}
+.rd-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.rd-textarea {
+  height: auto !important;
+  padding: 14px !important;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 88px;
+}
+
+.rd-book-actions {
+  display: flex; justify-content: space-between;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--bmw-hairline);
+  margin-top: 8px;
+}
+
+/* Step 2 — confirmation */
+.rd-confirm {
+  text-align: center;
+  padding: 48px 32px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.rd-confirm-icon {
+  width: 64px; height: 64px;
+  margin: 0 auto 24px;
+  background: var(--bmw-primary);
+  color: var(--bmw-on-primary);
+  display: flex; align-items: center; justify-content: center;
+}
+.rd-confirm h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--bmw-ink);
+  letter-spacing: -0.3px;
+}
+.rd-confirm > p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--bmw-body);
+  margin: 0 0 32px;
+  text-wrap: pretty;
+  line-height: 1.55;
+}
+.rd-confirm-card {
+  background: var(--bmw-surface-soft);
+  padding: 24px 28px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+.rd-confirm-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--bmw-body);
+  border-bottom: 1px solid var(--bmw-hairline);
+  gap: 16px;
+}
+.rd-confirm-row:last-child { border-bottom: none; }
+.rd-confirm-row .bmw-label {
+  flex: none;
+  min-width: 80px;
+  font-size: 10px;
+}
+.rd-confirm-row strong {
+  color: var(--bmw-ink);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.rd-confirm-row--total {
+  background: var(--bmw-ink);
+  color: var(--bmw-on-dark);
+  margin: 16px -28px -24px;
+  padding: 20px 28px;
+  font-size: 18px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.rd-confirm-row--total span:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--bmw-on-dark-soft);
+  align-self: center;
+  min-width: auto;
+}
+.rd-confirm-row--total span:last-child {
+  color: var(--bmw-on-dark);
+  font-size: 24px;
+}
+.rd-confirm-helper {
+  display: flex; align-items: center; gap: 8px;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--bmw-muted);
+  padding-top: 16px;
+}
+.rd-confirm-helper strong {
+  color: var(--bmw-ink);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------- */
+/*  Contact                                                      */
+/* ------------------------------------------------------------- */
+.rd-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: stretch;
+}
+.rd-contact-aside h2 { margin: 16px 0 24px; }
+.rd-contact-aside p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--bmw-body);
+  margin: 0 0 40px;
+  max-width: 480px;
+  text-wrap: pretty;
+}
+.rd-contact-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+}
+.rd-contact-item {
+  display: flex; gap: 16px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--bmw-hairline);
+  align-items: flex-start;
+}
+.rd-contact-item:first-child { padding-top: 0; }
+.rd-contact-item:last-child { border-bottom: none; padding-bottom: 0; }
+.rd-contact-item-icon {
+  width: 40px; height: 40px;
+  flex: none;
+  background: var(--bmw-ink);
+  color: var(--bmw-on-dark);
+  display: flex; align-items: center; justify-content: center;
+}
+.rd-contact-item-body { display: flex; flex-direction: column; gap: 4px; }
+.rd-contact-item-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--bmw-muted);
+}
+.rd-contact-item-value {
+  font-size: 18px; font-weight: 700;
+  color: var(--bmw-ink);
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+}
+a.rd-contact-item-value:hover { color: var(--bmw-primary); }
+.rd-contact-item-sub {
+  font-size: 13px; font-weight: 300;
+  color: var(--bmw-muted);
+  margin-top: 2px;
+}
+
+.rd-contact-card-art {
+  display: flex; flex-direction: column;
+  background: var(--bmw-canvas);
+  border: 1px solid var(--bmw-hairline);
+}
+.rd-contact-card-art-slot {
+  flex: 1;
+  aspect-ratio: 4 / 3;
+  background: var(--bmw-surface-card);
+  overflow: hidden;
+}
+.rd-contact-card-art-slot image-slot {
+  width: 100%; height: 100%;
+  display: block;
+}
+.rd-contact-card-art-cta {
+  background: var(--bmw-ink);
+  color: var(--bmw-on-dark);
+  padding: 24px 28px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px;
+}
+.rd-contact-card-art-cta-num {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--bmw-on-dark);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.2px;
+}
+.rd-contact-card-art-cta .bmw-btn { flex: none; }
+
+/* ------------------------------------------------------------- */
+/*  Footer (dark)                                                */
+/* ------------------------------------------------------------- */
+.rd-footer {
+  background: var(--bmw-surface-dark);
+  color: var(--bmw-on-dark);
+  padding: 80px 0 32px;
+}
+.rd-footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 64px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.rd-footer-brand .rd-logo-text strong {
+  font-size: 16px;
+}
+.rd-footer-blurb {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--bmw-on-dark-soft);
+  margin: 24px 0 0;
+  max-width: 400px;
+}
+.rd-footer-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.rd-footer-col-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--bmw-on-dark);
+  margin-bottom: 20px;
+}
+.rd-footer-col ul {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+  gap: 12px;
+}
+.rd-footer-col a,
+.rd-footer-col span {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--bmw-on-dark-soft);
+  cursor: pointer;
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+}
+.rd-footer-col a:hover { color: var(--bmw-on-dark); }
+.rd-footer-col span { cursor: default; }
+
+.rd-footer-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 32px;
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--bmw-on-dark-soft);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ------------------------------------------------------------- */
+/*  Responsive                                                   */
+/* ------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .rd-hero-light-inner { grid-template-columns: 1fr; gap: 48px; }
+  .rd-hero-light-title { font-size: 56px; }
+  .rd-hero-light-photo-tag { left: 16px; bottom: 16px; }
+  .rd-service-grid-2 { grid-template-columns: 1fr; }
+  .rd-pricing-feature { grid-template-columns: 1fr; }
+  .rd-pricing-feature-right::before { display: none; }
+  .rd-contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .rd-book-step-time { grid-template-columns: 1fr; }
+  .rd-book-step-time-left { border-right: none; border-bottom: 1px solid var(--bmw-hairline); }
+  .rd-footer-top { grid-template-columns: 1fr; gap: 40px; }
+  .rd-sec-head h2 { font-size: 44px; }
+}
+@media (max-width: 768px) {
+  .bmw-topnav-menu { display: none; }
+  .rd-logo-text strong { font-size: 13px; }
+  .rd-hero-light { padding: 56px 0 64px; }
+  .rd-hero-light-title { font-size: 42px; letter-spacing: -0.5px; }
+  .rd-hero-light-sub { font-size: 17px; }
+  .rd-service-card-lg { padding: 28px; }
+  .rd-service-title-lg { font-size: 26px; }
+  .rd-pricing-feature-left,
+  .rd-pricing-feature-price-card { padding: 32px; }
+  .rd-pricing-feature-title { font-size: 30px; }
+  .rd-pricing-feature-price-figure { font-size: 72px; }
+  .rd-pricing-callout { flex-direction: column; align-items: flex-start; padding: 24px; }
+  .rd-sec-head h2 { font-size: 34px; }
+  .rd-book-shell-head { flex-direction: column; align-items: flex-start; }
+  .rd-time-col-grid { grid-template-columns: 1fr; }
+  .rd-field-grid { grid-template-columns: 1fr; }
+  .rd-book-step-details { padding: 24px; }
+  .rd-contact-card-art-cta { flex-direction: column; align-items: flex-start; }
+}
